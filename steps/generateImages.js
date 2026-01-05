@@ -34,7 +34,7 @@ export async function generateImages(promptSections) {
       // I used backticks (`) here because 'children's' has an apostrophe 
       // which breaks the single quotes in your original string.
       const textPart = { 
-        text: `Create a whimsical, illustration set in a magical, fantasy world. Use a playful, storybook art style. Focus on creating an enchanting, imaginative atmosphere. Ensure the illustration feels like a scene from a children's storybook based on this story section: ${fullPrompt}` 
+        text: `Create a cinematic, high-fidelity illustration. Use a realistic, detailed art style similar to concept art for a high-budget drama or thriller. Focus on dramatic lighting, emotional depth, and a compelling atmosphere. Ensure the illustration feels like a keyframe from a serious, engaging movie based on this story section: ${fullPrompt}` 
       };
 
       const parts = [textPart];
