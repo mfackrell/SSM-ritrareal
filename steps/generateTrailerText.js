@@ -14,14 +14,14 @@ export async function generateTrailerText(bookTitle) {
     messages: [
       {
         role: "system",
-        content: `create an engaging and capivating summary of this book. it should be akin to movie trailer. limit 180 words. This needs to be exciting attention grabbing and captivating to the audience. Capture the climax of the story in a bold yet intriguing way that makes the consumer want to read the whole book. The description should be ironic, stupid akin to a story that a drunk person would tell. Maintain the telling of the story but interject nonsensicial statements that will catch the viewer off guard make it entertaining. only return the summary do not describe what was done or give any other commentary. Return in paragraph form not with bullet points or stars`
+        content: `create an engaging and captivating summary of this book. it should be akin to a cinematic movie trailer. limit 180 words. This needs to be exciting, attention grabbing and captivating to the audience. Capture the climax of the story in a bold, suspenseful way that makes the consumer want to read the whole book. The tone should be serious, high-stakes, and deeply compelling. Focus on the tension and the emotional core of the narrative without being silly. only return the summary do not describe what was done or give any other commentary. Return in paragraph form not with bullet points or stars`
       },
       {
         role: "user",
         content: bookTitle
       }
     ],
-    temperature: 1, // High temperature for "drunk" randomness
+    temperature: .5, // High temperature for "drunk" randomness
   });
 
   const trailerText = response.choices[0].message.content;
