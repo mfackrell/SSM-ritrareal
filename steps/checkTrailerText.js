@@ -14,7 +14,7 @@ export async function checkTrailerText(inputText) {
     messages: [
       {
         role: "system",
-        content: "Rephrase this. this is critical command: This must NEVER exceed 150 words. for any reason. Make it exciting!"
+        content: "Rephrase this. this is critical command: This must NEVER exceed 150 words. for any reason. Make it engaging! you are a great storyteller!"
       },
       {
         role: "user",
