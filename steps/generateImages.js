@@ -45,7 +45,7 @@ export async function generateImages(promptSections) {
 
     try {
       const fullPrompt =
-        `Create a cinematic, high-fidelity illustration. Use a realistic, detailed art style similar to concept art for a high-budget drama or thriller. Focus on dramatic lighting, emotional depth, and a compelling atmosphere. Ensure the illustration feels like a keyframe from a serious, engaging movie based on this story section: ${fullPrompt}`;
+        `Create a cinematic, high-fidelity illustration. Use a realistic, detailed art style similar to concept art for a high-budget drama or thriller. Focus on dramatic lighting, emotional depth, and a compelling atmosphere. Ensure the illustration feels like a keyframe from a serious, engaging movie based on this story section: ${sectionText}`;
 
       const publicUrl = await callSdxlManager(fullPrompt);
 
