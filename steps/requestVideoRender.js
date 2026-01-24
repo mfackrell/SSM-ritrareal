@@ -56,6 +56,7 @@ async function pollRunPod(jobId) {
 
 export async function requestVideoRender(audioData, imageMap) {
   console.log("Preparing Render Payload...");
+  console.log("[Render] imageMap received:", imageMap);
 
   const audioUrl = audioData?.fileUrl || audioData;
   if (!audioUrl || typeof audioUrl !== "string") {
