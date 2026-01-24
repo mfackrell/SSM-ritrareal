@@ -82,14 +82,18 @@ export async function runOrchestrator(payload = {}) {
       }
 
     } catch (e) {
-      console.error("Video Render or Zapier handoff failed.");
+      console.error("Video Render or Zapier handoff failed:", e.message);
       renderResult = { error: e.message };
     }
   } else {
     console.warn("Skipping video render: Missing audio or images.");
   }
   
-  console.log("Orchestrator finished successfully.");
+  if (renderResult?.error) {
+    console.warn("Orchestrator finished with render failure.");
+  } else {
+    console.log("Orchestrator finished successfully.");
+  }
 
   return {
     status: "completed",
